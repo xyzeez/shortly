@@ -10,5 +10,230 @@
       href="./assets/images/favicon-32x32.png" />
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
   </head>
-  <body> </body>
+  <body>
+    <header class="header">
+      <a href="#" class="logo header__logo" aria-label="Home - Shortly">
+        <img src="./assets/images/logo.svg" alt="" class="logo__img" />
+      </a>
+      <nav class="nav header__nav">
+        <button class="nav__hamburgger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+        <menu class="nav__menu">
+          <li class="nav__listitem">
+            <a href="#" class="nav__link">Features</a>
+          </li>
+          <li class="nav__listitem">
+            <a href="#" class="nav__link">Pricing</a>
+          </li>
+          <li class="nav__listitem">
+            <a href="#" class="nav__link">Resources</a>
+          </li>
+        </menu>
+        <ul class="nav__menu nav__menu--auth">
+          <li class="nav__listitem">
+            <a href="" class="nav__link">Login</a>
+          </li>
+          <li class="nav__listitem">
+            <a href="" class="btn nav__link">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__content">
+          <h1 class="hero__heading heading">More than just shorter links</h1>
+          <p class="hero__text text"
+            >Build your brand’s recognition and get detailed insights on how
+            your links are performing.
+          </p>
+          <a href="#" class="hero__btn btn">Get Started</a>
+        </div>
+      </section>
+      <section class="shorter">
+        <h2 class="sr-only">Input your URL in the form below</h2>
+        <form class="form shorter__form">
+          <div class="input-container">
+            <label for="link" class="sr-only">Link:</label>
+            <input
+              type="text"
+              placeholder="Shorten a link here..."
+              aria-errormessage="linkErrorMessage"
+              class="form__input" />
+            <p
+              id="linkErrorMessage"
+              aria-live="polite"
+              class="form__error-message"
+              >Please add a valid link</p
+            >
+          </div>
+          <button type="submit">Shorten It!</button>
+        </form>
+        <ul class="shorter__list">
+          <li class="shorter__listitem">
+            <div class="shortened">
+              <p class="text shortened__text">https://www.frontendmentor.io</p>
+              <div class="shortened__inner">
+                <p class="text shortened__link">https://rel.ink/k4lKyk</p>
+                <button class="btn shortened__btn">Copy</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="stats">
+        <h2 class="heading stats__heading">Advanced Statistics</h2>
+        <p class="text stats__text">
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+        <ul class="stats__list">
+          <li class="stats__listitem">
+            <div class="stat stats__stat">
+              <img
+                src="./assets/images/icon-brand-recognition.svg"
+                alt=""
+                class="stat__img" />
+              <h3 class="heading stat__heading">Brand Recognition</h3>
+              <p class="text stat__text">
+                Boost your brand recognition with each click. Generic links
+                don’t mean a thing. Branded links help instil confidence in your
+                content.
+              </p>
+            </div>
+          </li>
+          <li class="stats__listitem">
+            <div class="stat stats__stat">
+              <img
+                src="./assets/images/icon-detailed-records.svg"
+                alt=""
+                class="stat__img" />
+              <h3 class="heading stat__heading">Detailed Records</h3>
+              <p class="text stat__text">
+                Gain insights into who is clicking your links. Knowing when and
+                where people engage with your content helps inform better
+                decisions.
+              </p>
+            </div>
+          </li>
+          <li class="stats__listitem">
+            <div class="stat stats__stat">
+              <img
+                src="./assets/images/icon-fully-customizable.svg"
+                alt=""
+                class="stat__img" />
+              <h3 class="heading stat__heading">Fully Customizable</h3>
+              <p class="text stat__text">
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="footer__top">
+        <h2 class="heading footer__heading">Boost your links today</h2>
+        <a href="#" class="btn footer__btn">Get Started</a>
+      </section>
+      <section class="footer__main">
+        <a href="#" class="logo footer__logo">
+          <img src="./assets/images/logo.svg" alt="" class="logo__img" />
+        </a>
+        <nav class="nav footer__nav">
+          <div class="nav__inner">
+            <h3 class="heading nav__heading">Features</h3>
+            <ul class="nav__list">
+              <li class="nav__listitem">
+                <a href="#" class="nav__link">Link Shortening</a>
+              </li>
+              <li class="nav__listitem">
+                <a href="#" class="nav__link">Branded Links</a>
+              </li>
+              <li class="nav__listitem">
+                <a href="#" class="nav__link">Analytics</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav__inner">
+            <h3 class="heading nav__heading">Resources</h3>
+            <ul class="nav__list">
+              <li class="nav__listitem">
+                <a href="#" class="nav__link">Blog</a>
+              </li>
+              <li class="nav__listitem">
+                <a href="#" class="nav__link">Developers</a>
+              </li>
+              <li class="nav__listitem">
+                <a href="#" class="nav__link">Support</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav__inner">
+            <h3 class="heading nav__heading">Company</h3>
+            <ul class="nav__list">
+              <li class="nav__listitem">
+                <a href="#" class="nav__link">About</a>
+              </li>
+              <li class="nav__listitem">
+                <a href="#" class="nav__link">Our Team</a>
+              </li>
+              <li class="nav__listitem">
+                <a href="#" class="nav__link">Careers</a>
+              </li>
+              <li class="nav__listitem">
+                <a href="#" class="nav__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <ul class="socials footer__socials">
+          <li class="socials__listitem">
+            <a href="#" aria-label="facebook" class="socials__link">
+              <img
+                src="./assets/images/icon-facebook.svg"
+                alt=""
+                class="socials__icon" />
+            </a>
+          </li>
+          <li class="socials__listitem">
+            <a href="#" aria-label="twitter" class="socials__link">
+              <img
+                src="./assets/images/icon-twitter.svg"
+                alt=""
+                class="socials__icon" />
+            </a>
+          </li>
+          <li class="socials__listitem">
+            <a href="#" aria-label="pinterest" class="socials__link">
+              <img
+                src="./assets/images/icon-pinterest.svg"
+                alt=""
+                class="socials__icon" />
+            </a>
+          </li>
+          <li class="socials__listitem">
+            <a href="#" aria-label="instagram" class="socials__link">
+              <img
+                src="./assets/images/icon-instagram.svg"
+                alt=""
+                class="socials__icon" />
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+  </body>
 </html>
