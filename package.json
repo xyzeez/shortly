@@ -1,0 +1,16 @@
+{
+  "name": "shortly",
+  "version": "1.0.0",
+  "license": "ISC",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel --open --lazy",
+    "prebuild": "rm -rf dist .parcel-cache",
+    "build": "npm run prebuild && parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0"
+  }
+}
