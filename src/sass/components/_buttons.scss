@@ -1,0 +1,30 @@
+@use '../utilities' as *;
+
+.btn {
+  display: block;
+  font-family: $poppins;
+  font-weight: 700;
+  text-align: center;
+  color: $white;
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem;
+  background: $cyan;
+
+  &--pry {
+    border-radius: 9999px;
+    //
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 210px;
+    padding: 1rem 0;
+  }
+
+  &--sec {
+    border-radius: 6px;
+    //
+    font-size: 1.2rem;
+    // max-width: 210px;
+    padding: 0.8rem 0;
+  }
+}

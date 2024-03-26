@@ -7,16 +7,22 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png" />
+      href="./images/favicon-32x32.png" />
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./sass/styles.scss" />
   </head>
   <body>
     <header class="header">
       <a href="#" class="logo header__logo" aria-label="Home - Shortly">
-        <img src="./assets/images/logo.svg" alt="" class="logo__img" />
+        <img src="./images/logo.svg" alt="" class="logo__img" />
       </a>
       <nav class="nav header__nav">
-        <button class="nav__hamburgger">
+        <button class="nav__hamburger">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -29,42 +35,47 @@
               d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
-        <menu class="nav__menu">
-          <li class="nav__listitem">
-            <a href="#" class="nav__link">Features</a>
-          </li>
-          <li class="nav__listitem">
-            <a href="#" class="nav__link">Pricing</a>
-          </li>
-          <li class="nav__listitem">
-            <a href="#" class="nav__link">Resources</a>
-          </li>
-        </menu>
-        <ul class="nav__menu nav__menu--auth">
-          <li class="nav__listitem">
-            <a href="" class="nav__link">Login</a>
-          </li>
-          <li class="nav__listitem">
-            <a href="" class="btn nav__link">Sign Up</a>
-          </li>
-        </ul>
+        <div class="nav__inner hidden">
+          <menu class="nav__menu">
+            <li class="nav__listitem">
+              <a href="#" class="nav__link">Features</a>
+            </li>
+            <li class="nav__listitem">
+              <a href="#" class="nav__link">Pricing</a>
+            </li>
+            <li class="nav__listitem">
+              <a href="#" class="nav__link">Resources</a>
+            </li>
+          </menu>
+          <ul class="nav__menu nav__menu--auth">
+            <li class="nav__listitem">
+              <a href="" class="nav__link">Login</a>
+            </li>
+            <li class="nav__listitem">
+              <a href="" class="btn btn--pry nav__link">Sign Up</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="main">
       <section class="hero">
         <div class="hero__content">
-          <h1 class="hero__heading heading">More than just shorter links</h1>
-          <p class="hero__text text"
+          <h1 class="heading hero__heading">More than just shorter links</h1>
+          <p class="text hero__text"
             >Build your brand’s recognition and get detailed insights on how
             your links are performing.
           </p>
-          <a href="#" class="hero__btn btn">Get Started</a>
+          <a href="#" class="btn btn--pry hero__btn">Get Started</a>
+        </div>
+        <div class="hero__img">
+          <img src="./images/illustration-working.svg" alt="" />
         </div>
       </section>
       <section class="shorter">
         <h2 class="sr-only">Input your URL in the form below</h2>
         <form class="form shorter__form">
-          <div class="input-container">
+          <div class="form__input-container">
             <label for="link" class="sr-only">Link:</label>
             <input
               type="text"
@@ -74,11 +85,13 @@
             <p
               id="linkErrorMessage"
               aria-live="polite"
-              class="form__error-message"
+              class="text text--error form__error-message"
               >Please add a valid link</p
             >
           </div>
-          <button type="submit">Shorten It!</button>
+          <button type="submit" class="btn btn--sec form__btn">
+            Shorten It!
+          </button>
         </form>
         <ul class="shorter__list">
           <li class="shorter__listitem">
@@ -102,7 +115,7 @@
           <li class="stats__listitem">
             <div class="stat stats__stat">
               <img
-                src="./assets/images/icon-brand-recognition.svg"
+                src="./images/icon-brand-recognition.svg"
                 alt=""
                 class="stat__img" />
               <h3 class="heading stat__heading">Brand Recognition</h3>
@@ -116,7 +129,7 @@
           <li class="stats__listitem">
             <div class="stat stats__stat">
               <img
-                src="./assets/images/icon-detailed-records.svg"
+                src="./images/icon-detailed-records.svg"
                 alt=""
                 class="stat__img" />
               <h3 class="heading stat__heading">Detailed Records</h3>
@@ -130,7 +143,7 @@
           <li class="stats__listitem">
             <div class="stat stats__stat">
               <img
-                src="./assets/images/icon-fully-customizable.svg"
+                src="./images/icon-fully-customizable.svg"
                 alt=""
                 class="stat__img" />
               <h3 class="heading stat__heading">Fully Customizable</h3>
@@ -146,15 +159,15 @@
     <footer class="footer">
       <section class="footer__top">
         <h2 class="heading footer__heading">Boost your links today</h2>
-        <a href="#" class="btn footer__btn">Get Started</a>
+        <a href="#" class="btn btn--pry footer__btn">Get Started</a>
       </section>
       <section class="footer__main">
         <a href="#" class="logo footer__logo">
-          <img src="./assets/images/logo.svg" alt="" class="logo__img" />
+          <img src="./images/logo.svg" alt="" class="logo__img" />
         </a>
         <nav class="nav footer__nav">
           <div class="nav__inner">
-            <h3 class="heading nav__heading">Features</h3>
+            <h4 class="heading nav__heading">Features</h4>
             <ul class="nav__list">
               <li class="nav__listitem">
                 <a href="#" class="nav__link">Link Shortening</a>
@@ -168,7 +181,7 @@
             </ul>
           </div>
           <div class="nav__inner">
-            <h3 class="heading nav__heading">Resources</h3>
+            <h4 class="heading nav__heading">Resources</h4>
             <ul class="nav__list">
               <li class="nav__listitem">
                 <a href="#" class="nav__link">Blog</a>
@@ -182,7 +195,7 @@
             </ul>
           </div>
           <div class="nav__inner">
-            <h3 class="heading nav__heading">Company</h3>
+            <h4 class="heading nav__heading">Company</h4>
             <ul class="nav__list">
               <li class="nav__listitem">
                 <a href="#" class="nav__link">About</a>
@@ -203,7 +216,7 @@
           <li class="socials__listitem">
             <a href="#" aria-label="facebook" class="socials__link">
               <img
-                src="./assets/images/icon-facebook.svg"
+                src="./images/icon-facebook.svg"
                 alt=""
                 class="socials__icon" />
             </a>
@@ -211,7 +224,7 @@
           <li class="socials__listitem">
             <a href="#" aria-label="twitter" class="socials__link">
               <img
-                src="./assets/images/icon-twitter.svg"
+                src="./images/icon-twitter.svg"
                 alt=""
                 class="socials__icon" />
             </a>
@@ -219,7 +232,7 @@
           <li class="socials__listitem">
             <a href="#" aria-label="pinterest" class="socials__link">
               <img
-                src="./assets/images/icon-pinterest.svg"
+                src="./images/icon-pinterest.svg"
                 alt=""
                 class="socials__icon" />
             </a>
@@ -227,7 +240,7 @@
           <li class="socials__listitem">
             <a href="#" aria-label="instagram" class="socials__link">
               <img
-                src="./assets/images/icon-instagram.svg"
+                src="./images/icon-instagram.svg"
                 alt=""
                 class="socials__icon" />
             </a>

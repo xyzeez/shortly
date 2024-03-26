@@ -1,0 +1,72 @@
+* {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object,
+picture {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  all: unset;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  width: fit-content;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

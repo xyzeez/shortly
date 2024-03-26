@@ -1,0 +1,104 @@
+@use '../utilities/' as *;
+
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2.5rem;
+  padding: 6.5rem 1.5rem 2rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    margin-right: -1.5rem;
+    overflow-x: hidden;
+
+    img {
+      max-width: 520px;
+    }
+  }
+}
+
+.shorter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem 2rem;
+  margin-top: 8.5rem;
+  background-color: $gray;
+
+  &__form {
+    margin-top: -5rem;
+  }
+
+  &__list {
+    display: none;
+  }
+}
+
+.stats {
+  padding: 4rem 1.5rem 5rem;
+  background-color: $gray;
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    margin: 2rem 0 3rem;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      width: 5px;
+      height: calc(100% - 1rem);
+      background-color: $cyan;
+      z-index: -1;
+    }
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem 3rem;
+  margin-top: 3rem;
+  border-radius: 10px;
+  background-color: $white;
+
+  &__img {
+    background-color: $dark-violet;
+    padding: 1.5rem;
+    margin-top: -2.5rem;
+    border-radius: 100%;
+  }
+
+  &__heading {
+    margin: 2rem 0 1.5rem;
+  }
+}

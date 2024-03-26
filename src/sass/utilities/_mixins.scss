@@ -1,0 +1,12 @@
+/// media-queries
+@mixin breakpoint($size) {
+  @media screen and (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin respond-to($size, $query: 'min-width') {
+  @media screen and ($query: $size) {
+    @content;
+  }
+}

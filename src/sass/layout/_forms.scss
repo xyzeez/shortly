@@ -1,0 +1,52 @@
+@use '../utilities/' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: $dark-violet;
+  background-image: url(../images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 50px -50px;
+  background-size: contain;
+
+  &__input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &:has(.form__input[aria-invalid='true']) {
+      padding-bottom: 1.4rem;
+    }
+  }
+
+  &__input {
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    background-color: $white;
+
+    &[aria-invalid='true'] {
+      color: $red;
+      border: 2px solid $red;
+
+      &::placeholder {
+        color: $red;
+      }
+    }
+  }
+
+  &__error-message {
+    position: absolute;
+    bottom: 0;
+    display: none;
+  }
+
+  &__input[aria-invalid='true'] + .form__error-message {
+    display: block;
+  }
+}
