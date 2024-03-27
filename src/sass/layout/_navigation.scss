@@ -42,8 +42,6 @@ body {
   }
 
   &.header__nav {
-    // z-index: 100;
-
     .nav__inner {
       position: fixed;
       top: 6rem;
@@ -53,6 +51,7 @@ body {
       align-items: center;
       gap: 2rem;
       width: calc(100% - 3rem);
+      max-width: 350px;
       padding: 2.5rem 1.5rem;
       border-radius: 10px;
       background-color: $dark-violet;
@@ -71,6 +70,12 @@ body {
     .nav__menu:is(ul) {
       padding-top: 2rem;
       border-top: 1px solid $white;
+    }
+
+    @include respond-to(768px) {
+      .nav__inner {
+        right: 2.5rem;
+      }
     }
 
     @include respond-to(1024px) {
