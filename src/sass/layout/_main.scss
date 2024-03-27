@@ -5,29 +5,76 @@
   flex-direction: column-reverse;
   gap: 2.5rem;
   padding: 6.5rem 1.5rem 2rem;
+  overflow-x: hidden;
 
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 50ch;
+    text-align: center;
   }
 
   &__heading {
-    text-align: center;
+    color: $very-dark-violet;
   }
 
   &__text {
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    color: $grayish-violet;
+    margin: 1rem 0 2rem;
   }
 
   &__img {
-    margin-right: -1.5rem;
-    overflow-x: hidden;
-
     img {
       max-width: 520px;
+      margin: 0 auto;
+      margin-right: -1.5rem;
+    }
+  }
+
+  @include respond-to(768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 12rem 2.5rem 2rem;
+  }
+
+  @include respond-to(1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0rem;
+    padding: 12rem 3.5rem 2rem;
+
+    &__content {
+      align-items: start;
+      text-align: left;
+    }
+
+    &__btn {
+      margin: 0;
+    }
+  }
+
+  @include respond-to(1280px) {
+    padding: 9.5rem 9rem 1rem;
+
+    &__text {
+      margin: 0px 0 2rem;
+    }
+
+    &__img {
+      img {
+        max-width: 620px;
+        margin: 0 auto;
+        margin-right: -15rem;
+      }
+    }
+  }
+
+  @include respond-to(1440px) {
+    &__img {
+      img {
+        margin-right: -5rem;
+      }
     }
   }
 }
@@ -47,18 +94,36 @@
   &__list {
     display: none;
   }
+
+  @include respond-to(768px) {
+    padding: 0 2.5rem 2rem;
+  }
+
+  @include respond-to(1024px) {
+    padding: 0 3.5rem 2rem;
+  }
+
+  @include respond-to(1280px) {
+    padding: 0 9rem 2rem;
+  }
 }
 
 .stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 4rem 1.5rem 5rem;
   background-color: $gray;
 
   &__heading {
     text-align: center;
+    color: $very-dark-violet;
   }
 
   &__text {
     text-align: center;
+    color: $grayish-violet;
+    max-width: 45ch;
     margin: 2rem 0 3rem;
   }
 
@@ -78,6 +143,51 @@
       background-color: $cyan;
       z-index: -1;
     }
+  }
+
+  &__listitem {
+    width: min(100%, 500px);
+  }
+
+  @include respond-to(768px) {
+    padding: 4rem 2.5rem 5rem;
+
+    &__text {
+      margin: 1rem 0 1rem;
+    }
+  }
+
+  @include respond-to(1024px) {
+    &__list {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+      min-height: 395px;
+
+      &::before {
+        bottom: calc(50% - 5px);
+        width: calc(100% - 1rem);
+        height: 5px;
+      }
+    }
+
+    &__listitem {
+      &:nth-of-type(1) {
+        margin-top: 1rem;
+      }
+
+      &:nth-of-type(2) {
+        align-self: center;
+      }
+
+      &:nth-of-type(3) {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  @include respond-to(1280px) {
+    padding: 5rem 9rem 5rem;
   }
 }
 
@@ -99,6 +209,24 @@
   }
 
   &__heading {
+    color: $very-dark-violet;
     margin: 2rem 0 1.5rem;
+  }
+
+  &__text {
+    color: $grayish-violet;
+  }
+
+  @include respond-to(1024px) {
+    align-items: start;
+    text-align: left;
+
+    &__img {
+      padding: 1.2rem;
+    }
+
+    &__heading {
+      margin: 2rem 0 1rem;
+    }
   }
 }

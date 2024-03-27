@@ -16,7 +16,6 @@
     background-image: url(../images/bg-boost-mobile.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    border: 1px solid #000;
   }
 
   &__heading {
@@ -40,10 +39,47 @@
     text-align: center;
     margin: 3.5rem 0;
   }
+
+  @include respond-to(768px) {
+    &__top {
+      min-height: 230px;
+      background-image: url(../images/bg-boost-desktop.svg);
+    }
+
+    &__main {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 3rem 2.5rem;
+    }
+
+    &__nav {
+      text-align: left;
+      margin: 0;
+      margin-left: auto;
+    }
+  }
+
+  @include respond-to(1024px) {
+    &__main {
+      gap: 6rem;
+      padding: 3rem 3.5rem;
+    }
+  }
+
+  @include respond-to(1280px) {
+    &__main {
+      padding: 3rem 9rem;
+    }
+  }
 }
 
 .socials {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
+
+  @include respond-to(768px) {
+    gap: 1rem;
+  }
 }

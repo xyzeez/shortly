@@ -4,6 +4,10 @@
   &__hamburger {
     display: block;
     width: 35px;
+
+    @include respond-to(1024px) {
+      display: none;
+    }
   }
 
   &.header__nav {
@@ -35,6 +39,37 @@
       padding-top: 2rem;
       border-top: 1px solid $white;
     }
+
+    @include respond-to(1024px) {
+      width: 100%;
+
+      .nav__inner {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        border-radius: 0px;
+        background-color: transparent;
+        opacity: 1;
+      }
+
+      .nav__menu {
+        flex-direction: row;
+        align-items: center;
+        width: fit-content;
+        font-size: 1rem;
+        color: $grayish-violet;
+      }
+
+      .nav__menu:is(ul) {
+        padding-top: 0rem;
+        border-top: 0;
+      }
+    }
   }
 
   &.footer__nav {
@@ -42,14 +77,29 @@
     flex-direction: column;
     gap: 2rem;
 
-    &.nav__inner {
-    }
-
     .nav__list {
       display: flex;
       flex-direction: column;
       gap: 0.6rem;
+      color: $grayish-violet;
       margin-top: 1.5rem;
+    }
+
+    @include respond-to(768px) {
+      flex-direction: row;
+      gap: 3rem;
+
+      .nav__list {
+        margin-top: 1rem;
+      }
+
+      .nav__link {
+        font-size: 0.8rem;
+      }
+    }
+
+    @include respond-to(1024px) {
+      gap: 5rem;
     }
   }
 }
