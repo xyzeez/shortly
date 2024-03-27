@@ -79,6 +79,14 @@
   flex-direction: row;
   gap: 1.5rem;
 
+  &__icon {
+    transition: all 0.3s ease;
+
+    &:is(:hover, :focus) {
+      transform: scale(0.8);
+    }
+  }
+
   @include respond-to(768px) {
     gap: 1rem;
   }

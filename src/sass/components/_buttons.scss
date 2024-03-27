@@ -11,6 +11,12 @@
   padding: 0.5rem;
   margin: 0 auto;
   background: $cyan;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:is(:hover, :focus) {
+    background: $cyan-light;
+  }
 
   &--pry {
     font-size: 1.2rem;
