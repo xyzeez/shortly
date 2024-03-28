@@ -60,6 +60,20 @@ body {
     }
   }
 
+  &:is(.shortened__text) {
+    font-weight: 700;
+    font-size: 0.98rem;
+
+    @include respond-to(768px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &:is(.shortened__link) {
+    font-weight: 700;
+    font-size: 0.98rem;
+  }
+
   &:is(.stats__text) {
     font-size: 0.98rem;
 
