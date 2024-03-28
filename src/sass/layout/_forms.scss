@@ -52,7 +52,7 @@
 
   @include respond-to(768px) {
     flex-direction: row;
-    justify-content: flex-start;
+    align-items: flex-start;
     padding: 1.5rem 2rem;
     background-image: url(../images/bg-shorten-desktop.svg);
     background-position: 0px 0px;

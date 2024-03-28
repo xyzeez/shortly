@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="./sass/styles.scss" />
-    <script src="./app.js" defer></script>
+    <script type="module" src="./js/app.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -76,7 +76,7 @@
       </section>
       <section class="shorter">
         <h2 class="sr-only">Input your URL in the form below</h2>
-        <form class="form shorter__form">
+        <form id="shortenerForm" class="form shorter__form">
           <div class="form__input-container">
             <label for="link" class="sr-only">Link:</label>
             <input
@@ -95,7 +95,7 @@
             Shorten It!
           </button>
         </form>
-        <ul class="shorter__list">
+        <ul id="shortenerList" class="shorter__list">
           <!-- <li class="shorter__listitem">
             <div class="shortened">
               <p class="text shortened__text">https://www.frontendmentor.io</p>

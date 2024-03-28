@@ -14,8 +14,6 @@ const openNav = (status) => {
 const monitorNav = () => {
   let navOpen = false;
 
-  console.log('dd');
-
   navBtn.addEventListener('click', () => {
     navOpen = !navOpen;
     openNav(navOpen);
@@ -29,4 +27,4 @@ const monitorNav = () => {
   });
 };
 
-monitorNav();
+export default monitorNav;
