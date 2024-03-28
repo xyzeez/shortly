@@ -17,7 +17,8 @@ const clearInput = (input) => {
 const shortenUrl = async (url) => {
   try {
     console.log(url);
-    const res = await fetch(`https://ulvis.net/api.php?url=${url}`, {
+    const res = await fetch(`https://cleanuri.com/api/v1/shorten?url=${url}`, {
+      method: 'POST',
       mode: 'no-cors',
     });
 
