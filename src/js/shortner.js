@@ -19,6 +19,7 @@ const shortenUrl = async (url) => {
     console.log(url);
     const res = await fetch(`https://cleanuri.com/api/v1/shorten?url=${url}`, {
       method: 'POST',
+      mode: 'no-cors',
     });
 
     const { data } = await res.json();
