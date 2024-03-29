@@ -79,8 +79,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Shortly - URL shortening API landing page [SCSS + Vanillajs]](https://www.frontendmentor.io/solutions/shortly-url-shortening-api-landing-page-scss-vanillajs-c7dXfR7VpN)
+- Live Site URL: [shortly](https://femc-shortly.netlify.app/)
 
 ## My process
 
@@ -88,10 +88,13 @@ Users should be able to:
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) &nbsp; ![Sass](https://img.shields.io/badge/-Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)&nbsp; ![JavaScript](https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black) &nbsp;
 
+- [uiballs](https://uiball.com/ldrs/)
+- [validatorjs](https://github.com/validatorjs/validator.js)
+- [tinyurl](https://discord.com/channels/824970620529279006/1175398414805119026/1175401636483567676)
+
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Clipboard: writeText() method](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText)
 
 ## Author
 
