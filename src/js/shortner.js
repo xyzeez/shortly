@@ -16,20 +16,31 @@ const clearInput = (input) => {
 
 const shortenUrl = async (url) => {
   try {
-    console.log(url);
-    const res = await fetch(`https://cleanuri.com/api/v1/shorten?url=${url}`, {
-      method: 'POST',
-      mode: 'no-cors',
-    });
+    const res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`);
 
-    const { data } = await res.json();
+    if (!res.ok) throw new Error('Failed to shorten URL');
 
-    if (!res.ok) throw new Error();
+    const data = await res.text();
 
-    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }
+};
+
+const renderUrlMarkup = (oldUrl, newUrl) => {
+  const markup = `
+    <li class="shorter__listitem">
+      <div class="shortened">
+        <p class="text shortened__text">${oldUrl}</p>
+        <div class="shortened__inner">
+          <p class="text shortened__link">${newUrl}</p>
+          <button class="btn btn--sec shortened__btn">Copy</button>
+        </div>
+      </div>
+    </li>`;
+
+  shortenerList.insertAdjacentHTML('afterbegin', markup);
 };
 
 const monitorForm = () => {
@@ -41,21 +52,24 @@ const monitorForm = () => {
     inputValid(input, true);
   });
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const value = input.value.trim();
+    const url = input.value.trim();
 
-    isValid = isURL(value);
+    isValid = isURL(url);
 
     if (!isValid) {
       inputValid(input, false);
       return;
     }
 
-    shortenUrl(value);
+    const newUrl = await shortenUrl(url);
+
+    renderUrlMarkup(url, newUrl);
+
+    clearInput(input);
   });
 };
 
 export default monitorForm;
-////
