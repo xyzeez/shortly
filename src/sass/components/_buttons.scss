@@ -1,7 +1,9 @@
 @use '../utilities' as *;
 
 .btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: $poppins;
   font-weight: 700;
   text-align: center;

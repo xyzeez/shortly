@@ -1,9 +1,10 @@
 import monitorNav from './navigation';
-import monitorForm from './shortner';
+import { monitorForm, monitorCopyBtn } from './shortner';
 
 const init = () => {
   monitorNav();
   monitorForm();
+  monitorCopyBtn();
 };
 
 init();
