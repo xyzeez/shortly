@@ -121,20 +121,26 @@
 }
 
 .shortened {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
   text-align: left;
   border-radius: 10px;
   background-color: $white;
 
   &__text {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     color: $dark-violet;
-    width: 100%;
     padding: 1rem 1rem 0.5rem;
   }
 
   &__inner {
+    grid-column: 1/2;
+    grid-row: 2/3;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -153,16 +159,22 @@
   }
 
   @include respond-to(768px) {
-    flex-direction: row;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem 1.5rem;
 
     &__text {
+      grid-column: 1/2;
+      grid-row: 1/2;
       padding: 0;
     }
 
     &__inner {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      width: 100%;
       flex-direction: row;
       align-items: center;
       padding: 0;
@@ -172,6 +184,10 @@
     &__link {
       margin-left: auto;
     }
+  }
+
+  @include respond-to(1024px) {
+    gap: 3rem;
   }
 }
 
