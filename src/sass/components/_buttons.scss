@@ -8,8 +8,7 @@
   font-weight: 700;
   text-align: center;
   color: $white;
-  width: 100%;
-  max-width: 300px;
+  width: min(100%, 300px);
   padding: 0.5rem;
   margin: 0 auto;
   background: $cyan;
@@ -23,14 +22,14 @@
   &--pry {
     font-size: 1.2rem;
     letter-spacing: 0.05em;
-    max-width: 210px;
+    width: 210px;
     padding: 1rem 0;
     border-radius: 9999px;
 
     @include respond-to(768px) {
       font-size: 1rem;
       letter-spacing: 0.05em;
-      max-width: 180px;
+      width: 180px;
       padding: 0.8rem 0;
     }
   }
@@ -38,7 +37,7 @@
   &--sec {
     border-radius: 6px;
     font-size: 1.2rem;
-    max-width: 100%;
+    width: 100%;
     padding: 0.8rem 0;
 
     &:is(.shortened__btn) {
@@ -51,11 +50,11 @@
     }
 
     @include respond-to(768px) {
-      max-width: 160px;
+      width: 160px;
 
       &:is(.shortened__btn) {
         font-size: 0.9rem;
-        max-width: 90px;
+        width: 90px;
       }
     }
 
