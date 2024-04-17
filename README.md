@@ -13,11 +13,11 @@
   <!--  -->
   <p align="center">
     <br />
-    <a href="#">View Demo</a>
+    <a href="https://femc-shortly.netlify.app/">View Demo</a>
     ·
-    <a href="#" target="_blank">Report Bug</a>
+    <a href="https://github.com/xyzeez/shortly/issues" target="_blank">Report Bug</a>
     ·
-    <a href="#" target="_blank">Request Feature</a>
+    <a href="https://github.com/xyzeez/shortly/issues" target="_blank">Request Feature</a>
   </p>
   <!--  -->
   <div align="center">
